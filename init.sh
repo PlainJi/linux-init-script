@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#set -e
+set -e
 
 RED='\e[31m'
 GREEN='\e[32m'
