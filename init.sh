@@ -26,6 +26,8 @@ sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
 echo -e "${GREEN}set git default param...${NC}"
 git config --global user.name "plainji"
 git config --global user.email "plain_ji@163.com"
+git config --global push.default matching
+git config --global push.default simple
 
 echo -e "${GREEN}generate rsa ssh-key...${NC}"
 mkdir -p ~/.ssh/;cd ~/.ssh/
