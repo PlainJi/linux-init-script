@@ -11,6 +11,8 @@ basepath=$(cd `dirname $0`; pwd)
 cd ~
 
 sudo apt-get update
+sudo apt-get install -y curl
+
 echo -e "${GREEN}install vim...${NC}"
 sudo apt-get install -y vim
 
