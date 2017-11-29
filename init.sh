@@ -10,6 +10,7 @@ NC='\e[0m'
 basepath=$(cd `dirname $0`; pwd)
 cd ~
 
+sudo apt-get update
 echo -e "${GREEN}install vim...${NC}"
 sudo apt-get install -y vim
 
@@ -41,10 +42,14 @@ if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
 	echo -e "${GREEN}please add rsa key to git...${NC}"
 	echo -e "${RED}have u done?${NC}"
 	read temp
-
-	echo -e "${GREEN}check git via ssh...${NC}"
-	ssh -T git@github.com
+	if [ '$temp' = 'Y' -o '$temp' = 'y' ]; then
+		echo -e "${GREEN}check git via ssh...${NC}"
+		ssh -T git@github.com
+	else
+		echo "ignore"
+	fi
 fi
+
 echo -e "${GREEN}install chrome...${NC}"
 cd $basepath
 #sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
@@ -53,7 +58,7 @@ sudo cp google-chrome.list /etc/apt/sources.list.d/
 cat linux_signing_key.pub |sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y google-chrome-stable
-/usr/bin/google-chrome-stable www.baidu.com www.google.com
+#/usr/bin/google-chrome-stable www.baidu.com www.google.com
 
 echo -e "${GREEN}change bash to zsh..."
 chsh -s /bin/zsh
