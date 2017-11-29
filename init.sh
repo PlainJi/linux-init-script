@@ -17,7 +17,7 @@ echo -e "${GREEN}install vim...${NC}"
 sudo apt-get install -y vim
 
 echo -e "${GREEN}install tmux...${NC}"
-sudo apt-get install -y tmux
+sudo apt-get install -y terminator
 
 echo -e "${GREEN}install zsh...${NC}"
 sudo apt-get install -y zsh
