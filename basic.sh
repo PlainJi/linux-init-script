@@ -10,6 +10,11 @@ NC='\e[0m'
 basepath=$(cd `dirname $0`; pwd)
 cd ~
 
+if [ `whoami` != "root" ]; then
+	echo -e "${RED}use sudo...${NC}"
+	exit 1
+fi
+
 sudo apt-get update
 sudo apt-get install -y curl
 
@@ -19,9 +24,9 @@ sudo apt-get install -y vim
 echo -e "${GREEN}install tmux...${NC}"
 sudo apt-get install -y terminator
 
-echo -e "${GREEN}install zsh...${NC}"
-sudo apt-get install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo -e "${GREEN}install chrome...${NC}"
+cd $basepath
+sudo apt-get install -y chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra
 
 echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
@@ -42,9 +47,9 @@ if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
 	ssh-add id_rsa
 	cat ~/.ssh/id_rsa.pub
 	echo -e "${GREEN}please add rsa key to git...${NC}"
-	echo -e "${RED}have u done?${NC}"
+	echo -e "${RED}have u done? (Y/n)${NC}"
 	read temp
-	if [ '$temp' = 'Y' -o '$temp' = 'y' ]; then
+	if [ "$temp" = 'Y' -o "$temp" = 'y' ]; then
 		echo -e "${GREEN}check git via ssh...${NC}"
 		ssh -T git@github.com
 	else
@@ -52,16 +57,6 @@ if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
 	fi
 fi
 
-echo -e "${GREEN}install chrome...${NC}"
-cd $basepath
-#sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
-#wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
-sudo cp google-chrome.list /etc/apt/sources.list.d/
-cat linux_signing_key.pub |sudo apt-key add -
-sudo apt-get update
-sudo apt-get install -y google-chrome-stable
-#/usr/bin/google-chrome-stable www.baidu.com www.google.com
-
-echo -e "${GREEN}change bash to zsh..."
-chsh -s /bin/zsh
-
+echo -e "${GREEN}install zsh...${NC}"
+sudo apt-get install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
