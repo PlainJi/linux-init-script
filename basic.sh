@@ -55,8 +55,8 @@ fi
 echo -e "${GREEN}install chrome...${NC}"
 cd $basepath
 #sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
-sudo cp google-chrome.list /etc/apt/sources.list.d/
 #wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+sudo cp google-chrome.list /etc/apt/sources.list.d/
 cat linux_signing_key.pub |sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y google-chrome-stable
