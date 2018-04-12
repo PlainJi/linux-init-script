@@ -10,10 +10,10 @@ NC='\e[0m'
 basepath=$(cd `dirname $0`; pwd)
 cd ~
 
-if [ `whoami` != "root" ]; then
-	echo -e "${RED}use sudo...${NC}"
-	exit 1
-fi
+#if [ `whoami` != "root" ]; then
+#	echo -e "${RED}use sudo...${NC}"
+#	exit 1
+#fi
 
 sudo apt-get update
 sudo apt-get install -y curl
@@ -51,7 +51,7 @@ if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
 	read temp
 	if [ "$temp" = 'Y' -o "$temp" = 'y' ]; then
 		echo -e "${GREEN}check git via ssh...${NC}"
-		ssh -T git@github.com
+		echo `ssh -T git@github.com`
 	else
 		echo "ignore"
 	fi
