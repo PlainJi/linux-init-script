@@ -10,10 +10,10 @@ NC='\e[0m'
 basepath=$(cd `dirname $0`; pwd)
 cd ~
 
-if [ `whoami` != "root" ]; then
-	echo -e "${RED}use sudo...${NC}"
-	exit 1
-fi
+#if [ `whoami` != "root" ]; then
+#	echo -e "${RED}use sudo...${NC}"
+#	exit 1
+#fi
 
 sudo apt-get update
 sudo apt-get install -y curl wget git
@@ -26,9 +26,9 @@ sudo apt-get install -y terminator
 
 echo -e "${GREEN}install chrome...${NC}"
 cd $basepath
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb .
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-#sudo apt-get install -y chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra
+rm google-chrome-stable_current_amd64.deb
 
 echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
@@ -53,7 +53,7 @@ if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
 	read temp
 	if [ "$temp" = 'Y' -o "$temp" = 'y' ]; then
 		echo -e "${GREEN}check git via ssh...${NC}"
-		ssh -T git@github.com
+		echo `ssh -T git@github.com`
 	else
 		echo "ignore"
 	fi
