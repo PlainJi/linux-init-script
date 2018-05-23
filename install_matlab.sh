@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+echo "INSTALL MATLAB:"
+echo "down MATLAB 2017b from yun.baidu.com"
+echo "sudo mount -t auto -o loop /home/username/R2017b_glnxa64.iso /media/matlab"
+echo "cd /media/matlab; sudo ./install"
+echo "sudo cp license_standalone.lic /usr/local/MATLAB/R2017b/licenses/"
+echo "sudo cp libmwservices.so /usr/local/MATLAB/R2017b/bin/glnxa64/"
+echo "umount /media/matlab/"
+echo ""
+echo "REMOVE MATLAB:"
+echo "sudo rm -rf /usr/local/MATLAB/R2017b"
+echo "sudo rm /usr/local/bin/matlab /usr/local/bin/mcc /usr/local/bin/mex /usr/local/bin/mbuild"
