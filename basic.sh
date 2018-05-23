@@ -26,7 +26,9 @@ sudo apt-get install -y terminator
 
 echo -e "${GREEN}install chrome...${NC}"
 cd $basepath
-sudo apt-get install -y chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb .
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
 
 echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
