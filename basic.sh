@@ -26,7 +26,7 @@ sudo apt-get install -y terminator
 
 echo -e "${GREEN}install chrome...${NC}"
 cd $basepath
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb .
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
@@ -62,3 +62,8 @@ fi
 echo -e "${GREEN}install zsh...${NC}"
 sudo apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo -e "${GREEN}delete unused diretorys...${NC}"
+cd ~;rm -rf Music Public Templates Videos examples.desktop
+
+echo -e "${GREEN}done!${NC}"
