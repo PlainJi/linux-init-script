@@ -16,7 +16,7 @@ cd ~
 #fi
 
 sudo apt-get update
-sudo apt-get install -y curl wget git
+sudo apt-get install -y curl wget git nfs-common
 
 echo -e "${GREEN}install vim...${NC}"
 sudo apt-get install -y vim
