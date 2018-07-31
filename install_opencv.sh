@@ -1,5 +1,5 @@
 # Configuration
-HOME_DIR=/home/plain/
+HOME_DIR=~
 VERSION=3.2.0
 
 echo $HOME_DIR
@@ -31,6 +31,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D INSTALL_C_EXAMPLES=OFF \
     -D OPENCV_EXTRA_MODULES_PATH=${HOME_DIR}/opencv_contrib-${VERSION}/modules \
     -D PYTHON_EXECUTABLE=/usr/bin/python \
+    -D ENABLE_CXX11=ON \
+    -D CMAKE_C_COMPILER=/usr/bin/gcc-5 \
     -D BUILD_EXAMPLES=ON ..
 
 # Check output cmake, it should include python 2
