@@ -7,4 +7,6 @@ rosdep update
 echo "source /opt/ros/kinetic/setup.zsh" >> ~/.zshrc
 source ~/.zshrc
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
-
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws
+catkin build
