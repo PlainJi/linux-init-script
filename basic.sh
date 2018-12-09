@@ -33,6 +33,9 @@ rm google-chrome-stable_current_amd64.deb
 echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
 
+echo -e "${GREEN}install tools...${NC}"
+sudo apt-get install -y dos2unix
+
 echo -e "${RED}set git username? (y/n)${NC}"; read cfg
 if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
 	echo -e "${GREEN}set git default param...${NC}"
