@@ -68,5 +68,6 @@ cd ~;rm -rf Music Public Templates Videos examples.desktop
 echo -e "${GREEN}install zsh...${NC}"
 sudo apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+grep -q "setopt no_nomatch" ~/.zshrc || echo "setopt no_nomatch" >> ~/.zshrc
 
 echo -e "${GREEN}done!${NC}"
