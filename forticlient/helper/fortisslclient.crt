@@ -1,0 +1,75 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4270187 (0x41286b)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=California, L=Sunnyvale, O=Fortinet, OU=Certificate Authority, CN=support/emailAddress=support@fortinet.com
+        Validity
+            Not Before: Apr 25 19:09:50 2017 GMT
+            Not After : Jan 19 03:14:07 2038 GMT
+        Subject: C=US, ST=California, L=Sunnyvale, O=Fortinet, OU=FortiClient, CN=FortiClient-SSLVPN/emailAddress=support@fortinet.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:c0:43:a4:ef:0d:d8:44:93:17:28:bd:17:e0:14:
+                    5e:ff:96:83:09:aa:59:9e:6e:d7:1e:b5:d8:30:99:
+                    25:3f:5d:ab:11:ed:b6:5f:09:88:dd:6f:56:04:8c:
+                    14:60:0c:97:01:35:b8:09:b6:52:c5:34:d4:98:de:
+                    c0:10:4c:a9:4d:31:4b:48:66:57:c2:3f:0d:2f:5c:
+                    ae:cf:05:94:9d:a7:fe:db:29:24:e6:2e:b0:93:22:
+                    37:3a:e8:5e:19:b6:48:c2:58:5c:85:d9:6b:10:d3:
+                    e3:1d:fe:e7:e8:b3:4a:ee:d1:7a:03:46:0e:92:6d:
+                    7a:2c:ea:d8:43:b8:3f:b7:78:91:cd:8d:cb:c4:8c:
+                    a7:64:bf:97:13:6d:29:19:f8:7b:66:a8:c1:49:6f:
+                    3f:d5:47:f1:d6:f8:32:93:7c:40:ad:36:e6:09:24:
+                    99:e9:b6:04:85:13:a0:6f:61:41:7c:8c:97:a5:49:
+                    15:ba:f9:ff:60:6d:dc:49:0c:d1:60:0e:82:95:0f:
+                    b4:11:13:94:34:ff:88:48:c4:b3:eb:3d:29:cd:31:
+                    db:e3:e5:66:0d:4f:42:9b:82:44:ed:64:32:62:e4:
+                    7b:6e:4a:ee:f5:45:85:c1:67:2b:ec:c1:9f:e7:25:
+                    12:3d:18:39:c2:d7:6a:2a:93:b1:7d:1e:1f:48:2f:
+                    ff:d5
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+    Signature Algorithm: sha256WithRSAEncryption
+        c5:51:3b:c1:3e:bd:fd:ef:9b:fc:77:ae:13:fc:8f:06:7c:af:
+        f6:f9:51:ff:3c:c0:64:51:eb:ad:ee:3b:cb:42:14:ae:04:12:
+        1a:5c:30:c8:8f:c6:9a:c0:62:8c:d8:a6:a3:00:0a:f9:c6:30:
+        69:fb:2d:99:62:f7:97:8e:21:1b:75:56:e1:04:19:02:f8:85:
+        19:f8:46:1b:7b:9d:37:d6:a8:1e:74:bf:e8:e6:82:8b:f4:3f:
+        6f:95:70:f6:3f:99:f8:b0:1a:66:a5:b0:ea:a5:8c:50:ac:bd:
+        1a:7c:40:c5:07:26:70:b7:74:54:a2:e5:35:64:33:5d:30:ea:
+        88:4d:7b:41:a8:d0:94:4d:cf:94:ef:95:94:0f:aa:a6:40:b9:
+        62:82:80:82:87:40:d1:7a:ca:3f:3b:7d:c5:d7:63:e2:fd:30:
+        ce:61:97:0e:3b:e1:ac:26:d7:e2:dc:82:8d:3c:f4:6b:26:08:
+        aa:0e:2a:90:d4:f6:b9:81:ec:eb:0a:bb:74:11:9b:9a:2c:57:
+        af:bb:a1:c8:b0:99:df:b1:e8:6c:d2:e7:8e:40:5c:8f:c9:63:
+        20:c4:9c:73:4f:2c:e2:01:8a:6a:01:be:61:01:4d:3e:c8:e9:
+        e2:13:3c:e2:6b:43:62:8d:ff:f4:20:f5:5f:ee:b8:33:b4:3b:
+        6f:d3:c9:1b
+-----BEGIN CERTIFICATE-----
+MIIDzTCCArWgAwIBAgIDQShrMA0GCSqGSIb3DQEBCwUAMIGgMQswCQYDVQQGEwJV
+UzETMBEGA1UECBMKQ2FsaWZvcm5pYTESMBAGA1UEBxMJU3Vubnl2YWxlMREwDwYD
+VQQKEwhGb3J0aW5ldDEeMBwGA1UECxMVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MRAw
+DgYDVQQDEwdzdXBwb3J0MSMwIQYJKoZIhvcNAQkBFhRzdXBwb3J0QGZvcnRpbmV0
+LmNvbTAeFw0xNzA0MjUxOTA5NTBaFw0zODAxMTkwMzE0MDdaMIGhMQswCQYDVQQG
+EwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTESMBAGA1UEBxMJU3Vubnl2YWxlMREw
+DwYDVQQKEwhGb3J0aW5ldDEUMBIGA1UECxMLRm9ydGlDbGllbnQxGzAZBgNVBAMT
+EkZvcnRpQ2xpZW50LVNTTFZQTjEjMCEGCSqGSIb3DQEJARYUc3VwcG9ydEBmb3J0
+aW5ldC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAQ6TvDdhE
+kxcovRfgFF7/loMJqlmebtcetdgwmSU/XasR7bZfCYjdb1YEjBRgDJcBNbgJtlLF
+NNSY3sAQTKlNMUtIZlfCPw0vXK7PBZSdp/7bKSTmLrCTIjc66F4ZtkjCWFyF2WsQ
+0+Md/ufos0ru0XoDRg6SbXos6thDuD+3eJHNjcvEjKdkv5cTbSkZ+HtmqMFJbz/V
+R/HW+DKTfECtNuYJJJnptgSFE6BvYUF8jJelSRW6+f9gbdxJDNFgDoKVD7QRE5Q0
+/4hIxLPrPSnNMdvj5WYNT0KbgkTtZDJi5HtuSu71RYXBZyvswZ/nJRI9GDnC12oq
+k7F9Hh9IL//VAgMBAAGjDTALMAkGA1UdEwQCMAAwDQYJKoZIhvcNAQELBQADggEB
+AMVRO8E+vf3vm/x3rhP8jwZ8r/b5Uf88wGRR663uO8tCFK4EEhpcMMiPxprAYozY
+pqMACvnGMGn7LZli95eOIRt1VuEEGQL4hRn4Rht7nTfWqB50v+jmgov0P2+VcPY/
+mfiwGmalsOqljFCsvRp8QMUHJnC3dFSi5TVkM10w6ohNe0Go0JRNz5TvlZQPqqZA
+uWKCgIKHQNF6yj87fcXXY+L9MM5hlw474awm1+Lcgo089GsmCKoOKpDU9rmB7OsK
+u3QRm5osV6+7ociwmd+x6GzS545AXI/JYyDEnHNPLOIBimoBvmEBTT7I6eITPOJr
+Q2KN//Qg9V/uuDO0O2/TyRs=
+-----END CERTIFICATE-----
