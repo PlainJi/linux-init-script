@@ -93,9 +93,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias jj="clear"
+alias cc="clear"
 alias sl="ls"
-alias s="subl"
+alias s="vim"
 
 setopt no_nomatch
 export EDITOR="s"
