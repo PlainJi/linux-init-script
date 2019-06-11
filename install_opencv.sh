@@ -1,6 +1,6 @@
 # Configuration
-HOME_DIR=~
-VERSION=3.2.0
+HOME_DIR=/opt
+VERSION=3.3.1
 
 echo $HOME_DIR
 echo $VERSION
@@ -23,8 +23,7 @@ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/${VE
 unzip opencv_contrib.zip
 
 cd ${HOME_DIR}/opencv-${VERSION}/
-mkdir build
-cd build
+mkdir build;cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_PYTHON_EXAMPLES=ON \
@@ -38,9 +37,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 # Check output cmake, it should include python 2
 # For more information check: http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/
 
-make -j4
+make -j8
 sudo make install
 sudo ldconfig
 
-cd ${HOME_DIR}
-#rm -rf opencv-${VERSION} opencv_contrib-${VERSION} opencv.zip opencv_contrib.zip
+cd ${HOME_DIR};rm -rf opencv-${VERSION} opencv_contrib-${VERSION} opencv.zip opencv_contrib.zip
