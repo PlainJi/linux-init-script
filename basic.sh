@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 RED='\e[31m'
 GREEN='\e[32m'
 YELLOW='\e[33m'
@@ -25,10 +23,13 @@ echo -e "${GREEN}install tmux...${NC}"
 sudo apt-get install -y terminator
 
 echo -e "${GREEN}install chrome...${NC}"
-cd $basepath
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
+hash google-chrome
+if [[ $? -eq 1 ]]; then
+	cd $basepath
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i google-chrome-stable_current_amd64.deb
+	rm google-chrome-stable_current_amd64.deb
+fi
 
 echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
@@ -68,6 +69,6 @@ cd ~;rm -rf Music Public Templates Videos examples.desktop
 echo -e "${GREEN}install zsh...${NC}"
 sudo apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp -f .zshrc ~/
+rm ~/.zshrc;cp -f .zshrc ~/
 
 echo -e "${GREEN}done!${NC}"
