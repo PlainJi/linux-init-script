@@ -17,14 +17,14 @@ sudo apt-get install -y libatlas-base-dev gfortran
 sudo apt-get install -y python2.7-dev
 
 cd ${HOME_DIR}
-wget -O opencv.zip https://github.com/Itseez/opencv/archive/${VERSION}.zip
-unzip opencv.zip
-wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/${VERSION}.zip
-unzip opencv_contrib.zip
+sudo wget -O opencv.zip https://github.com/Itseez/opencv/archive/${VERSION}.zip
+sudo unzip opencv.zip
+sudo wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/${VERSION}.zip
+sudo unzip opencv_contrib.zip
 
 cd ${HOME_DIR}/opencv-${VERSION}/
-mkdir build;cd build
-cmake -D CMAKE_BUILD_TYPE=RELEASE \
+sudo mkdir build;cd build
+sudo cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D INSTALL_C_EXAMPLES=OFF \
@@ -37,8 +37,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 # Check output cmake, it should include python 2
 # For more information check: http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/
 
-make -j8
+sudo make -j8
 sudo make install
 sudo ldconfig
 
-cd ${HOME_DIR};rm -rf opencv-${VERSION} opencv_contrib-${VERSION} opencv.zip opencv_contrib.zip
+#cd ${HOME_DIR};sudo rm -rf opencv-${VERSION} opencv_contrib-${VERSION} opencv.zip opencv_contrib.zip

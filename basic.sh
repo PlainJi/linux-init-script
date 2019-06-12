@@ -35,7 +35,7 @@ echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
 
 echo -e "${GREEN}install tools...${NC}"
-sudo apt-get install -y dos2unix psensor htop nmon
+sudo apt-get install -y dos2unix psensor htop nmon ipython
 
 echo -e "${RED}set git username? (y/n)${NC}"; read cfg
 if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
