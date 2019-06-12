@@ -35,7 +35,7 @@ echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
 
 echo -e "${GREEN}install tools...${NC}"
-sudo apt-get install -y dos2unix
+sudo apt-get install -y dos2unix psensor
 
 echo -e "${RED}set git username? (y/n)${NC}"; read cfg
 if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
@@ -69,6 +69,6 @@ cd ~;rm -rf Music Public Templates Videos examples.desktop
 echo -e "${GREEN}install zsh...${NC}"
 sudo apt-get install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-rm ~/.zshrc;cp -f .zshrc ~/
+cd $basepath;rm -rf ~/.zshrc;cp -f .zshrc ~/
 
 echo -e "${GREEN}done!${NC}"
