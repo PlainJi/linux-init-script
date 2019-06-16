@@ -48,7 +48,7 @@ if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
 	echo -e "${GREEN}generate rsa ssh-key...${NC}"
 	mkdir -p ~/.ssh/;cd ~/.ssh/
 	rm -rf id_rsa*
-	ssh-keygen -t rsa -C "plain_ji@163.com"
+	ssh-keygen -t rsa -f id_rsa -P "" -C "plain_ji@163.com"
 	eval "$(ssh-agent -s)"
 	ssh-add id_rsa
 	cat ~/.ssh/id_rsa.pub
