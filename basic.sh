@@ -41,6 +41,7 @@ echo -e "${GREEN}install stickynotes...${NC}"
 sudo add-apt-repository ppa:umang/indicator-stickynotes
 sudo apt-get update
 sudo apt-get install indicator-stickynotes
+echo -e "${RED}if you want run indicator-stickynotes at start-up, add it to rc.local youself."
 
 echo -e "${RED}set git username? (y/n)${NC}"; read cfg
 if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
