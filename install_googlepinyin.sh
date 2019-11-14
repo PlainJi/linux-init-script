@@ -8,4 +8,5 @@ echo -e "${YELLOW}please select <fcitx> in the next window...${NC}"
 im-config
 echo -e "${YELLOW}logout and relogin
 choose Google Pinyin from Configure Current Input Method.
-config hotkey from Configure.${NC}"
+config hotkey from Configure.
+change /usr/share/fcitx/data/punc.mb.zh_CN for []${NC}"
