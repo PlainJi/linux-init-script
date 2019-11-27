@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Configuration
-HOME_DIR=.
+HOME_DIR=/opt
 VERSION=3.3.1
 
 echo $HOME_DIR

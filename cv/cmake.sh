@@ -6,6 +6,28 @@ set -x
 HOME_DIR=/opt
 VERSION=3.3.1
 
+cd ${HOME_DIR}/opencv-${VERSION}/build
+cmake \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DCATKIN_BUILD_BINARY_PACKAGE=ON \
+      -DCMAKE_INSTALL_PREFIX=${HOME_DIR}/opencv \
+      -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+      -DPYTHON_INCLUDE_DIR=/usr/include/python3.5 \
+      -DPYTHON_LIBRARY=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/libpython3.5.so \
+      -DPYTHON_BASENAME=-python3.5 \
+      -DSETUPTOOLS_DEB_LAYOUT=OFF \
+      -DENABLE_PRECOMPILED_HEADERS=OFF \
+      -DWITH_TBB=ON \
+      -DWITH_V4L=ON \
+      -DWITH_QT=OFF \
+      -DWITH_OPENGL=ON \
+      -DWITH_CUDA=ON \
+      -DENABLE_FAST_MATH=1 \
+      -DCUDA_FAST_MATH=1 \
+      -DWITH_CUBLAS=1 \
+      -DBUILD_PROTOBUF=OFF \
+      -DBUILD_opencv_dnn=OFF ..
+
 a() {
 # No GPU
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -47,25 +69,3 @@ cmake \
       -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.3.1/modules ..
 }
 
-
-cd ${HOME_DIR}/opencv-${VERSION}/build
-cmake \
-      -DCMAKE_BUILD_TYPE=Release \
-      -DCATKIN_BUILD_BINARY_PACKAGE=ON \
-      -DCMAKE_INSTALL_PREFIX=${HOME_DIR}/opencv \
-      -DPYTHON_EXECUTABLE=/usr/bin/python3 \
-      -DPYTHON_INCLUDE_DIR=/usr/include/python3.5 \
-      -DPYTHON_LIBRARY=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/libpython3.5.so \
-      -DPYTHON_BASENAME=-python3.5 \
-      -DSETUPTOOLS_DEB_LAYOUT=OFF \
-      -DENABLE_PRECOMPILED_HEADERS=OFF \
-      -DWITH_TBB=ON \
-      -DWITH_V4L=ON \
-      -DWITH_QT=OFF \
-      -DWITH_OPENGL=ON \
-      -DWITH_CUDA=ON \
-      -DENABLE_FAST_MATH=1 \
-      -DCUDA_FAST_MATH=1 \
-      -DWITH_CUBLAS=1 \
-      -DBUILD_PROTOBUF=OFF \
-      -DBUILD_opencv_dnn=OFF ..
