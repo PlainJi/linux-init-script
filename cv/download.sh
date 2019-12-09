@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Configuration
-HOME_DIR=/opt
+HOME_DIR=/home/tusimple/github
 VERSION=3.3.1
 
 echo $HOME_DIR

@@ -3,7 +3,7 @@
 set -x
 
 # Configuration
-HOME_DIR=/opt
+HOME_DIR=/home/tusimple/github
 VERSION=3.3.1
 
 cd ${HOME_DIR}/opencv-${VERSION}/build
@@ -17,6 +17,7 @@ cmake \
       -DPYTHON_BASENAME=-python3.5 \
       -DSETUPTOOLS_DEB_LAYOUT=OFF \
       -DENABLE_PRECOMPILED_HEADERS=OFF \
+      -DBUILD_EXAMPLES=ON \
       -DWITH_TBB=ON \
       -DWITH_V4L=ON \
       -DWITH_QT=OFF \

@@ -3,12 +3,12 @@
 set -x
 
 # Configuration
-HOME_DIR=/opt
+HOME_DIR=/home/tusimple/github
 VERSION=3.3.1
 cd ${HOME_DIR}/opencv-${VERSION}/build
 
 cpu_count=`cat /proc/cpuinfo |grep MHz | wc -l`
-let cpu_use=$cpu_count-3
+let cpu_use=$cpu_count-1
 echo $cpu_use
 
 make -j$cpu_use

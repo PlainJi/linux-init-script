@@ -3,7 +3,7 @@
 set -x
 
 # Configuration
-HOME_DIR=/opt
+HOME_DIR=/home/tusimple/github
 VERSION=3.3.1
 cd ${HOME_DIR}/opencv/lib
 
