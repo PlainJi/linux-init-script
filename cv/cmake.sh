@@ -3,14 +3,17 @@
 set -x
 
 # Configuration
-HOME_DIR=/home/tusimple/github
+HOME_DIR=/root/github/opencv
 VERSION=3.3.1
 
+if [ -d ${HOME_DIR}/opencv-${VERSION}/build ];then
+    rm -rf ${HOME_DIR}/opencv-${VERSION}/build/*
+fi
 cd ${HOME_DIR}/opencv-${VERSION}/build
 cmake \
       -DCMAKE_BUILD_TYPE=Release \
       -DCATKIN_BUILD_BINARY_PACKAGE=ON \
-      -DCMAKE_INSTALL_PREFIX=${HOME_DIR}/opencv \
+      -DCMAKE_INSTALL_PREFIX=${HOME_DIR}/install \
       -DPYTHON_EXECUTABLE=/usr/bin/python3 \
       -DPYTHON_INCLUDE_DIR=/usr/include/python3.5 \
       -DPYTHON_LIBRARY=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/libpython3.5.so \
@@ -21,6 +24,7 @@ cmake \
       -DWITH_TBB=ON \
       -DWITH_V4L=ON \
       -DWITH_QT=OFF \
+      -DWITH_GTK=ON \
       -DWITH_OPENGL=ON \
       -DWITH_CUDA=ON \
       -DENABLE_FAST_MATH=1 \
