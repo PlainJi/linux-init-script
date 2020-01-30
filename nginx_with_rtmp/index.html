@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遥控树莓派</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://vjs.zencdn.net/5.5.3/video-js.css"/>
+    <script src="http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.5.3/video.js"></script>
+    <style type="text/css">
+        #f {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        #lr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #r{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #left {
+            margin-right: 30px;
+        }
+        #right {
+            margin-left: 30px;
+        }
+        .btn{
+             background: #62559f;
+            }
+    </style>
+
+    <script>
+        function OnUp(btn_id) {
+            $.post("/buttonup", btn_id);
+        }
+        function OnDown(btn_id) {
+            $.post("/buttondown", btn_id);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="video">
+            <video id="livestream" class="center-block video-js vjs-default-skin vjs-big-play-centered"
+                controls autoplay preload="auto" width="1280" height="720"
+                poster="/wall-e.jpg"
+                data-setup="{}">
+                <!--source src="rtmp://ip:10000/live/1" type="rtmp/flv"-->
+                <source src="rtmp://58.200.131.2:1935/livetv/hunantv" type="rtmp/flv">
+            </video>
+        </div>
+
+        <div id="control">
+            <div id="f">
+                <button id="front" onmousedown="OnDown(this.id)" onmouseup="OnUp(this.id)" class="btn btn-lg btn-primary glyphicon glyphicon-circle-arrow-up"></button>
+            </div>
+            <div id="lr">
+                <button id='left' onmousedown="OnDown(this.id)" onmouseup="OnUp(this.id)" class="btn btn-lg btn-primary glyphicon glyphicon-circle-arrow-left"></button>
+                <button id='right' onmousedown="OnDown(this.id)" onmouseup="OnUp(this.id)" class="btn btn-lg btn-primary glyphicon glyphicon-circle-arrow-right"></button>
+            </div>
+            <div id="r">
+                <button id='rear' onmousedown="OnDown(this.id)" onmouseup="OnUp(this.id)" class="btn btn-lg btn-primary glyphicon glyphicon-circle-arrow-down"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
