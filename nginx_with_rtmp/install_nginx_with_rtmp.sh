@@ -23,4 +23,5 @@ touch stop_nginx.sh;echo "sudo /usr/local/nginx/sbin/nginx -s stop" > ~/stop_ngi
 cd ~;chmod +x *.sh
 
 echo "rtmp server url: rtmp://ip:10000/live/1"
+echo "ffmpeg -i /dev/video0 -vcodec libx264 -r 33 -f flv rtmp://ip:10000/live/1"
 echo "Done!"
