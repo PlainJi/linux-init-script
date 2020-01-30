@@ -18,8 +18,8 @@ rm -rf nginx-1.9.8.tar.gz master.zip nginx-1.9.8 nginx-rtmp-module-master
 sudo rm /usr/local/nginx/conf/nginx.conf
 sudo cp nginx.conf /usr/local/nginx/conf/
 sudo cp index.html /usr/local/nginx/html/
-touch start_nginx.sh;echo "sudo /opt/nginx/sbin/nginx" > ~/start_nginx.sh
-touch stop_nginx.sh;echo "sudo /opt/nginx/sbin/nginx -s stop" > ~/stop_nginx.sh
+touch start_nginx.sh;echo "sudo /usr/local/nginx/sbin/nginx" > ~/start_nginx.sh
+touch stop_nginx.sh;echo "sudo /usr/local/nginx/sbin/nginx -s stop" > ~/stop_nginx.sh
 cd ~;chmod +x *.sh
 
 echo "rtmp server url: rtmp://ip:10000/live/1"
