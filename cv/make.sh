@@ -3,7 +3,7 @@
 set -x
 
 # Configuration
-HOME_DIR=/home/tusimple/github
+HOME_DIR=/root/compile_opencv
 VERSION=3.3.1
 cd ${HOME_DIR}/opencv-${VERSION}/build
 

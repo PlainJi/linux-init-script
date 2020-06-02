@@ -1,0 +1,10 @@
+name: opencv
+version: 3.3.1.2+?
+
+extra_deps:
+  apt: libgtk2.0-dev libavcodec-dev libopenblas-dev liblapack-dev libeigen3-dev libavformat-dev libswscale-dev libtbb2 libtbb-dev libjpeg-dev libpng12-dev libtiff5-dev libjasper-dev libdc1394-22-dev libcanberra-gtk-module libhdf5-dev openexr libjasper-runtime
+
+build_info:
+  date: 2019-11-15 16:58:00
+  host:
+  user: plain

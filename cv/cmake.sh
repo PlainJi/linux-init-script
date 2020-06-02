@@ -3,7 +3,7 @@
 set -x
 
 # Configuration
-HOME_DIR=/root/github/opencv
+HOME_DIR=/root/compile_opencv
 VERSION=3.3.1
 
 if [ -d ${HOME_DIR}/opencv-${VERSION}/build ];then
@@ -21,7 +21,7 @@ cmake \
       -DSETUPTOOLS_DEB_LAYOUT=OFF \
       -DENABLE_PRECOMPILED_HEADERS=OFF \
       -DBUILD_EXAMPLES=ON \
-      -DWITH_TBB=ON \
+      -DWITH_TBB=OFF \
       -DWITH_V4L=ON \
       -DWITH_QT=OFF \
       -DWITH_GTK=ON \
