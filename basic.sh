@@ -26,9 +26,18 @@ echo -e "${GREEN}install chrome...${NC}"
 hash google-chrome
 if [[ $? -eq 1 ]]; then
 	cd $basepath
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-	sudo dpkg -i google-chrome-stable_current_amd64.deb
-	rm google-chrome-stable_current_amd64.deb
+	wget -O chrome_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i chrome_amd64.deb
+	rm chrome_amd64.deb
+fi
+
+echo -e "${GREEN}install vscode...${NC}"
+hash code
+if [[ $? -eq 1 ]]; then
+	cd $basepath
+	wget -O vscode_amd64.deb https://code.visualstudio.com/sha/download\?build\=stable\&os\=linux-deb-x64
+	sudo dpkg -i vscode_amd64.deb
+	rm vscode_amd64.deb
 fi
 
 echo -e "${GREEN}install openssh client&server&sftp...${NC}"
@@ -41,11 +50,11 @@ echo -e "${GREEN}system tuning..."
 (grep -q "fs.inotify.max_user_watches" /etc/sysctl.conf) || (echo "fs.inotify.max_user_watches=524288" | sudo tee -a /etc/sysctl.conf)
 sudo sysctl -p
 
-echo -e "${GREEN}install stickynotes...${NC}"
-sudo add-apt-repository ppa:umang/indicator-stickynotes
-sudo apt-get update
-sudo apt-get install indicator-stickynotes
-echo -e "${RED}if you want run indicator-stickynotes at start-up, add it to rc.local youself."
+#echo -e "${GREEN}install stickynotes...${NC}"
+#sudo add-apt-repository ppa:umang/indicator-stickynotes
+#sudo apt-get update
+#sudo apt-get install indicator-stickynotes
+#echo -e "${RED}if you want run indicator-stickynotes at start-up, add it to rc.local youself."
 
 echo -e "${RED}set git username? (y/n)${NC}"; read cfg
 if [ "$cfg" = 'y' -o "$cfg" = 'Y' ]; then
