@@ -35,7 +35,7 @@ echo -e "${GREEN}install openssh client&server&sftp...${NC}"
 sudo apt-get install -y openssh-client openssh-server openssh-sftp-server
 
 echo -e "${GREEN}install tools...${NC}"
-sudo apt-get install -y dos2unix psensor htop nmon ipython meld
+sudo apt-get install -y dos2unix psensor htop nmon ipython meld flameshot
 
 echo -e "${GREEN}system tuning..."
 (grep -q "fs.inotify.max_user_watches" /etc/sysctl.conf) || (echo "fs.inotify.max_user_watches=524288" | sudo tee -a /etc/sysctl.conf)
